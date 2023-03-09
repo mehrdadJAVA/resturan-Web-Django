@@ -1,0 +1,99 @@
+{% load jalali_tags %}
+{% load static %}
+{% load widget_tweaks %}<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css" rel="stylesheet'%}">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+        <!-- Template Stylesheet -->
+        <link href="{% static 'resturan/css/style.css'%}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <!-- Page Header End -->
+        
+        
+        <!-- Food Start -->
+        <div class="food mt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            <i class="flaticon-burgr"></i>
+                            <h4> مشتریه : {{name}}</h4>
+                            <p>تاریخ : {{date}}  ,  ساعت : {{time}}</p>
+                            <p>تعداد  : {{desk}}</p>
+                            <hr>
+                            <p> در تاریخ و ساعت ذکر شده رزرو خواهد شد برای تکمیل فرایند بیانه نظر گرفته شده را واریز کنید </p>
+                            <h5>مبلع قابل پرداخت : {{reserve_amaunt}} ت</h5>
+                            <br> 
+                            <a href="bankgateways">ادامه</a>
+                        </div>
+                    </div>
+
+            </div>
+        <center>
+
+        </div>
+    </center>
+        <!-- Food End -->
+        
+
+ 
+
+        <!-- Footer Start -->
+        <div class="footer">
+            
+            <div class="copyright">
+                <div class="container">
+                    {% comment %} <p>Copyright &copy; <a href="#">Your Site Name</a>, All Right Reserved.</p> {% endcomment %}
+                    <p>Designed By <a href="">mehrdad jamali</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'resturan/js/easing.min.js'%}"></script>
+        <script src="{% static 'resturan/js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment-timezone.min.js'%}"></script>
+        <script src="{% static 'resturan/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'resturan/js/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'resturan/js/contact.js'%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'resturan/js/main.js'%}"></script>
+    </body>
+</html>

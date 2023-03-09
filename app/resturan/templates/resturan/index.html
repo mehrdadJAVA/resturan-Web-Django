@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load jalali_tags %}
+{% load static %}
+{% load widget_tweaks %}
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" />
+    <title>Klassy Cafe - Restaurant HTML Template</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!--
+    
+TemplateMo 558 Klassy Cafe
+
+https://templatemo.com/tm-558-klassy-cafe
+
+   <link rel ="stylesheet" type="text/css" href ="{% static 'resturan/css/style1.css' %} ">
+
+    <! Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="{% static 'resturan/css/bootstrap.min.css'%}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'resturan/css/font-awesome.css'%}">
+
+    <link rel="stylesheet" href="{% static 'resturan/css/templatemo-klassy-cafe.css'%}">
+
+    <link rel="stylesheet" href="{% static 'resturan/css/owl-carousel.css'%}">
+
+    <link rel="stylesheet" href="{% static 'resturan/css/lightbox.css'%}">
+    {% comment %} <link rel="stylesheet" href="{% static 'resturan/css/custom.css'%}"> {% endcomment %}
+
+    <link rel="stylesheet" href="{% static 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css' %}">
+    <script src="{% static 'admin/js/django_jalali.min.js' %}"></script>
+
+
+    </head>
+    
+    <body>
+    
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>  
+    <!-- ***** Preloader End ***** -->
+    
+    
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            <img src="{% static 'resturan/images/klassy-logo.png'%}" align="klassy cafe html template">
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <li class="scroll-to-section"><a href="home" class="active">خانه</a></li>
+                            {% if user.is_authenticated  %}
+                                 <li class="scroll-to-section"><a href="register"> پروفایل</a></li>
+                            {% else %}
+                                <li class="scroll-to-section"><a href="register">ایجاد حساب</a></li>
+                                <li class="scroll-to-section"><a href="Login"> ورود به حساب</a></li>
+                            {%endif %}
+                            
+                           	
+                        <!-- 
+                            <li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop Down Page 1</a></li>
+                                    <li><a href="#">Drop Down Page 2</a></li>
+                                    <li><a href="#">Drop Down Page 3</a></li>
+                                </ul>
+                            </li>
+                        -->
+                            {% comment %} <li class="scroll-to-section"><a href="#menu"></a></li> {% endcomment %}
+                            <li class="scroll-to-section"><a href="#reservation">رزرو</a></li> 
+                            <li class="submenu">
+                                <a href="javascript:;">منو</a>
+                                <ul>
+                                    <li><a href="fastfood">فست فود</a></li>
+                                    <li><a href="sald">سالاد</a></li>
+                                    <li><a href="drink"> نوشیدنی</a></li>
+                                    {% comment %} <li><a href="#">Features Page 4</a></li> {% endcomment %}
+                                </ul>
+                            </li>
+                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
+                            <li class="scroll-to-section"><a href="#reservation">همکاری با ما</a></li> 
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+
+    <!-- ***** Main Banner Area Start ***** -->
+    <div id="top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="left-content">
+                        <div class="inner-content">
+                            <h4>  changal returant</h4>
+                            <h6> رستوران   چنگال</h6>
+                            <div class="main-white-button scroll-to-section">
+                                {% comment %} <a href="#reservation">Make A Reservation</a> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="main-banner header-text">
+                        <div class="Modern-Slider">
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'resturan/images/slide-01.jpg'%}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'resturan/images/slide-02.jpg'%}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                          <!-- Item -->
+                          <div class="item">
+                            <div class="img-fill">
+                                <img src="{% static 'resturan/images/slide-03.jpg'%}" alt="">
+                            </div>
+                          </div>
+                          <!-- // Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ***** Main Banner Area End ***** -->
+
+
+<!-- ***** Chefs Area Starts ***** -->
+<section class="section" id="chefs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 offset-lg-4 text-center">
+                <div class="section-heading">
+                    <h6></h6>
+                    <h2></h2>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="chef-item">
+                    <div class="thumb">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="down-content">
+                        <a href="fastfood">
+                        <h4>فست فود </h4>
+                        <span></span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4">
+                <div class="chef-item">
+                    <div class="thumb">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="down-content">
+                        <a href="sald">
+                            <h4> سالاد </h4>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-lg-4">
+                <div class="chef-item">
+                    <div class="thumb">
+                    <div class="down-content">
+                        <a href="drink">
+                            <h4> نوشیدنی </h4>
+                            <span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+
+
+    <section style="background-color: #eee;">
+        <div class="text-center container py-1">
+          <h4 class="mt-4 mb-5"><strong>قسمتی از منو</strong></h4>
+          
+          <div class="row">
+            {%for i in menu%}
+            <div class="col-lg-3 col-md-10 mb-4">
+              <div class="card">
+                <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                  data-mdb-ripple-color="light">
+                  <img src="{{i.img.url}}" 
+                    class="w-100" />
+                  <a href="#!">
+               
+                    <div class="hover-overlay">
+                      <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </div>
+                  </a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title mb-3">{{i.name}}</h5>
+                  
+                  {% comment %} <a href="" class="text-reset">
+                    <p>Category</p>
+                  </a> {% endcomment %}
+                  <h6 class="mb-3">قیمت  :  {{i.price}}</h6>
+                </div>
+                <div class="main-white-button">
+                    <h4>
+                    <a href="addto{{i.id}}">اضاقه کردن به سبد</a>
+                    <a style="color:blue;" href="delcart{{i.id}}">-</a>
+                    </h4>
+                </div>
+              </div>
+            </div>
+            {%endfor%}
+
+
+    </section>
+<br>
+
+
+<center>
+
+</center>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-xs-12">
+                <div class="right-text-content">
+                        
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-xs-12">
+                <div class="left-text-content">
+                    <h6>   
+                    </h6>
+                    <a href="#reservation" class="btn btn-dark btn-block btn-lg">برای رزرو کلیک کنید</a>
+               </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>درباره ما</h6>
+                            <h2>فست فود کولت</h2>
+                        </div>
+                        <p>
+                            رستوران جنگال سال هاست در تبریز با غذا های لذیذ در خدمت مشتریان هستیم  از سال 1389 فعالیت رستوران جنگال در تبریز شروع شد ما اماده قرار داد با تمام ارگان ها را داریم  ما برای اکثر شرکت ها وعده غذایی سرو میکنیم 
+                            رستوران جنگال سال هاست در تبریز با غذا های لذیذ در خدمت مشتریان هستیم  از سال 1389 فعالیت رستوران جنگال در تبریز شروع شد ما اماده قرار داد با تمام ارگان ها را داریم  ما برای اکثر شرکت ها وعده غذایی سرو میکنیم 
+                            رستوران جنگال سال هاست در تبریز با غذا های لذیذ در خدمت مشتریان هستیم  از سال 1389 فعالیت رستوران جنگال در تبریز شروع شد ما اماده قرار داد با تمام ارگان ها را داریم  ما برای اکثر شرکت ها وعده غذایی سرو میکنیم 
+                            رستوران جنگال سال هاست در تبریز با غذا های لذیذ در خدمت مشتریان هستیم  از سال 1389 فعالیت رستوران جنگال در تبریز شروع شد ما اماده قرار داد با تمام ارگان ها را داریم  ما برای اکثر شرکت ها وعده غذایی سرو میکنیم 
+
+                        </p>
+                        <div class="row">
+                            <div class="col-4">
+                                <img src="{% static 'resturan/images/about-thumb-01.jpg'%}" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'resturan/images/about-thumb-02.jpg'%}" alt="">
+                            </div>
+                            <div class="col-4">
+                                <img src="{% static 'resturan/images/about-thumb-03.jpg'%}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            {% comment %} <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a> {% endcomment %}
+                            <img src="{% static 'resturan/images/about-video-bg.jpg'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+<br>
+<hr>
+
+
+
+    <!-- ***** Chefs Area Ends ***** -->
+
+    <!-- ***** Reservation Us Area Starts ***** -->
+    <section class="section" id="reservation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>رزرو</h6>
+                            <h2>برای رزرو میز فرم را پر کرده و حداقل مبلغ گفته شده را واریز کنید</h2>
+                        </div>
+                        <p></p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="phone">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>شماره تماس</h4>
+                                    <span><a href="#">041-4122800</a><br><a href="#">041-3305840</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="message">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>ایمیل</h4>
+                                    <span><a href="#">hello@company.com</a><br><a href="#">info@company.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+
+
+                        <form id="contact"  method="POST">
+                            {% csrf_token %}
+                          <div class="row">
+                            <div class="col-lg-12">
+                            </div>
+
+                            <div class="col-lg-6 col-sm-12">
+                              <fieldset>
+                                {% render_field form.name type="text"  placeholder="نام " id="name" %} 
+                              </fieldset>
+
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                            <fieldset>
+                            {% render_field form.phone type="text"  placeholder="تلفن" id="phone" %} 
+                            </fieldset>
+                            </div>
+                            <div class="col-lg-6 col-sm-12">
+                              <fieldset>
+                                {% render_field form.date type="data" placeholder="مثال 10-08-1401 "  %} 
+                              </fieldset>
+                            </div>
+                    
+                            <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                  {% render_field form.time   placeholder=" " class="box" %} 
+                                </fieldset>
+                              </div>
+
+                              <div class="col-lg-6 col-sm-12">
+                                <fieldset>
+                                  {% render_field form.desk   placeholder=" " class="box" %} 
+                                </fieldset>
+                              </div>
+                
+
+            
+
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button-icon">تایید</button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <!-- ***** Reservation Area Ends ***** -->
+        
+    
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-xs-12">
+                    {% comment %} <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                    </div> {% endcomment %}
+                </div>
+                <div class="col-lg-4">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xs-12">
+                    <div class="left-text-content">
+                        
+                        
+                        <br>Design: mehrdad-jamali</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static 'resturan/js/jquery-2.1.0.min.js'%}"></script>
+
+    <!-- Bootstrap -->
+    <script src="{% static 'resturan/js/popper.js'%}"></script>
+    <script src="{% static 'resturan/js/bootstrap.min.js'%}"></script>
+
+    <!-- Plugins -->
+    <script src="{% static 'resturan/js/owl-carousel.js'%}"></script>
+    <script src="{% static 'resturan/js/accordions.js'%}"></script>
+    <script src="{% static 'resturan/js/datepicker.js'%}"></script>
+    <script src="{% static 'resturan/js/scrollreveal.min.js'%}"></script>
+    <script src="{% static 'resturan/js/waypoints.min.js'%}"></script>
+    <script src="{% static 'resturan/js/jquery.counterup.min.js'%}"></script>
+    <script src="{% static 'resturan/js/imgfix.min.js'%}"></script> 
+    <script src="{% static 'resturan/js/slick.js'%}"></script> 
+    <script src="{% static 'resturan/js/lightbox.js'%}"></script> 
+    <script src="{% static 'resturan/js/isotope.js'%}"></script> 
+    
+    <!-- Global Init -->
+    <script src="{% static 'resturan/js/custom.js'%}"></script>
+    
+    
+    
+    
+    <script src = "{% static 'resturan/js/script1.js'  %} " ></script>
+    <link rel="stylesheet" href="{% static 'admin/jquery.ui.datepicker.jalali/themes/base/jquery-ui.min.css' %}">
+    <script src="{% static 'admin/js/django_jalali.min.js' %}"></script>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+  
+
+    <script>
+        $(document).ready(function(){
+            $(".wish-icon i").click(function(){
+                $(this).toggleClass("fa-heart fa-heart-o");
+            });
+        });	
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+              $("."+selectedClass).fadeIn();
+              $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
+  </body>
+</html>

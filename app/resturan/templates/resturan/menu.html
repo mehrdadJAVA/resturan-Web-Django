@@ -1,0 +1,153 @@
+{% load jalali_tags %}
+{% load static %}
+{% load widget_tweaks %}<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Burger King - Food Website Template</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css" rel="stylesheet'%}">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+        <!-- Template Stylesheet -->
+        <link href="{% static 'resturan/css/style.css'%}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Burger <span>King</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="home" class="nav-item nav-link ">خانه</a>
+                        <a href="about" class="nav-item nav-link">درباره ما</a>
+                        <a href="employe" class="nav-item nav-link">همکاری با ما</a>
+                        <a href="menu" class="nav-item nav-link active">منو</a>
+                        
+                        {% if user.is_authenticated  %}
+                        <a href="cart" class="nav-item nav-link">سبد خرید</a>
+
+                        {% else %}
+                            <a href="register" class="nav-item nav-link ">ایجاد حساب</a>
+                            <a href="Login" class="nav-item nav-link ">ورود به حساب</a>
+                        {%endif %}                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header mb-0">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>منو</h2>
+                    </div>
+                    <div class="col-12">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+        
+        <!-- Food Start -->
+        <div class="food mt-0">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            <i class="flaticon-burger"></i>
+                            <h2>فست فود</h2>
+                            <p>
+                                با نان تازه و با سوسیس و همبرگر های دست ساز با گوشت خالص
+                            </p>
+                            <a href="fastfood">مشاهده</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            <i class="flaticon-snack"></i>
+                            <h2>سالاد</h2>
+                            <p>
+                                پیتزا های زستوران تمام موادش طبیعی بوده و از شرما های معتبر خارجی تهیه میشود
+                            </p>
+                            <a href="sald">مشاهده </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="food-item">
+                            <i class="flaticon-cocktail"></i>
+                            <h2>نوشیدنی</h2>
+                            <p>
+                                انواع نوشیدنی سرد و گرم در رستوران موجود هست و بصورت دلخواه میتوان دتب تدیب قل
+                            </p>
+                            <a href="drink"> مشاهده</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Food End -->
+        
+
+ 
+
+        <!-- Footer Start -->
+        <div class="footer">
+            
+            <div class="copyright">
+                <div class="container">
+                    {% comment %} <p>Copyright &copy; <a href="#">Your Site Name</a>, All Right Reserved.</p> {% endcomment %}
+                    <p>Designed By <a href="">mehrdad jamali</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'resturan/js/easing.min.js'%}"></script>
+        <script src="{% static 'resturan/js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment-timezone.min.js'%}"></script>
+        <script src="{% static 'resturan/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'resturan/js/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'resturan/js/contact.js'%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'resturan/js/main.js'%}"></script>
+    </body>
+</html>

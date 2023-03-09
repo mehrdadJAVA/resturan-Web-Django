@@ -1,0 +1,240 @@
+{% load jalali_tags %}
+{% load static %}
+{% load widget_tweaks %}<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>درباره ما</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'resturan/css/style.css'%}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Burger <span>King</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="home" class="nav-item nav-link ">خانه</a>
+                        <a href="about" class="nav-item nav-link active">درباره ما</a>
+                        <a href="employe" class="nav-item nav-link">همکاری با ما</a>
+                        <a href="menu" class="nav-item nav-link">منو</a>
+
+                        {% if user.is_authenticated  %}
+                        <a href="cart" class="nav-item nav-link">سبد خرید</a>
+
+                        {% else %}
+                            <a href="register" class="nav-item nav-link ">ایجاد حساب</a>
+                            <a href="Login" class="nav-item nav-link ">ورود به حساب</a>
+                        {%endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>درباره رستوران ما</h2>
+                    </div>
+                    <div class="col-12">
+                        {% comment %} <a href="">Home</a>
+                        <a href="">Features</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+
+        <!-- Feature Start -->
+        <div class="feature">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="section-header">
+                            <p>درباره رستوران ما</p>
+                            <h2></h2>
+                        </div>
+                        <div class="feature-text">
+                            <div class="feature-img">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <img src="{% static 'resturan/images/feature-1.jpg'%}" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="{% static 'resturan/images/feature-2.jpg'%}" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="{% static 'resturan/images/feature-3.jpg'%}" alt="Image">
+                                    </div>
+                                    <div class="col-6">
+                                        <img src="{% static 'resturan/images/feature-4.jpg'%}" alt="Image">
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                غذاهای سالم و در عین حال خوشمزه است . آن ها در کنار غذاهای معمولی و روزمره ای که بسیاری از مردم طرفدار آن هستند، غذاهای سالم و رژیمی نیز در اختیار مشتریان خود قرار می دهند .
+                                در این رستوران ها، غذاهای حاضری کمتر ارائه می شود. افرادی که به این رستوران ها می روند، به ویژه کسانی که در سفر هستند، می توانند انواع غذاهایی که برایشان مفید است سفارش دهند .اگر می خواهید از مسافرتتان لذت ببرید و در عین حال نمی خواهید وقت با ارزش سفرتان به آشپزی بگذرد، با توجه به نکات بالا، رستوران های خوب را شناسایی کرده و خود را به خطر بیماری و مسمویت غذایی نیندازید 
+                        </p>
+                            {% comment %} <a class="btn custom-btn" href="">Book A Table</a> {% endcomment %}
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-cooking"></i>
+                                    <h3>بهترین آشپز ه</h3>
+                                    <p>
+                                        مشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کرد                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-vegetable"></i>
+                                    <h3>سبزیجات تازه </h3>
+                                    <p>
+                                        مشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کرد                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-medal"></i>
+                                    <h3>تضمین کیفیت غذا</h3>
+                                    <p>
+                                        مشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کرد                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-meat"></i>
+                                    <h3>گوشت های تازه</h3>
+                                    <p>
+                                        مشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کرد                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="feature-item">
+                                    <i class="flaticon-courier"></i>
+                                    <h3>ارسال سریع غذا</h3>
+                                    <p>
+                                        مشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کرد                                    </p>
+                                </div>
+                            </div>
+                            {% comment %} <div class="col-sm-6">
+                                <div class="feaمشتری خود مشتری است. فازل و قیمت من. او از دکوراسیون آسان روباه مراقبت خواهد کردture-item">
+                                    <i class="flaticon-fruits-and-vegetables"></i>
+                                    <h3>Ground beef & Low fat</h3>
+                                    <p>
+                                        Lorem ipsum dolor sit amet elit. Phasel nec preti mi. Curabit facilis ornare velit non vulput metus tortor
+                                    </p>
+                                </div>
+                            </div> {% endcomment %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Feature End -->
+
+
+
+
+        <div class="about">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="{% static 'resturan/images/about.jpg'%}" alt="Image">
+                            <button type="button" class="btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <hr>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header">
+                                <p></p>
+                                <h2>از سال 1350 ما </h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    غذاهای سالم و در عین حال خوشمزه است . آن ها در کنار غذاهای معمولی و روزمره ای که بسیاری از مردم طرفدار آن هستند، غذاهای سالم و رژیمی نیز در اختیار مشتریان خود قرار می دهند .
+                                    در این رستوران ها، غذاهای حاضری کمتر ارائه می شود. افرادی که به این رستوران ها می روند، به ویژه کسانی که در سفر هستند، می توانند انواع غذاهایی که برایشان مفید است سفارش دهند .اگر می خواهید از مسافرتتان لذت ببرید و در عین حال نمی خواهید وقت با ارزش سفرتان به آشپزی بگذرد، با توجه به نکات بالا، رستوران های خوب را شناسایی کرده و خود را به خطر بیماری و مسمویت غذایی نیندازید 
+                                    </p>
+                                <p>
+                                </p>
+                                {% comment %} <a class="btn custom-btn" href="">Book A T/able</a> {% endcomment %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            
+            <div class="copyright">
+                <div class="container">
+                    {% comment %} <p>Copyright &copy; <a href="#">Your Site Name</a>, All Right Reserved.</p> {% endcomment %}
+                    <p>Designed By <a href="">mehrdad jamali</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'resturan/js/easing.min.js'%}"></script>
+        <script src="{% static 'resturan/js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment-timezone.min.js'%}"></script>
+        <script src="{% static 'resturan/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'resturan/js/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'resturan/js/contact.js'%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'resturan/js/main.js'%}"></script>
+    </body>
+</html>

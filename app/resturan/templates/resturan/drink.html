@@ -1,0 +1,320 @@
+{% load jalali_tags %}
+{% load static %}
+{% load widget_tweaks %}<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>درباره ما</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free Website Template" name="keywords">
+        <meta content="Free Website Template" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Nunito:600,700" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="{% static 'resturan/css/animate.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/owl.carousel.min.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/flaticon.css'%}" rel="stylesheet">
+        <link href="{% static 'resturan/css/tempusdominus-bootstrap-4.min.css'%}" rel="stylesheet" />
+
+        <!-- Template Stylesheet -->
+        <link href="{% static 'resturan/css/style.css'%}" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Nav Bar Start -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Burger <span>King</span></a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                      <a href="home" class="nav-item nav-link ">خانه</a>
+                      <a href="about" class="nav-item nav-link">درباره ما</a>
+                      <a href="employe" class="nav-item nav-link">همکاری با ما</a>
+                      <a href="menu" class="nav-item nav-link active">منو</a>
+
+                      {% if user.is_authenticated  %}
+                      <a href="cart" class="nav-item nav-link">سبد خرید</a>
+
+                      {% else %}
+                          <a href="register" class="nav-item nav-link ">ایجاد حساب</a>
+                          <a href="Login" class="nav-item nav-link ">ورود به حساب</a>
+                      {%endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Nav Bar End -->
+        
+        
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>  </h2>
+                    </div>
+                    <div class="col-12">
+                        {% comment %} <a href="">Home</a>
+                        <a href="">Features</a> {% endcomment %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+        
+<style>
+  /*
+* @subsection Shop
+*/
+.product {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product .caption {
+  margin-top: 15px;
+}
+
+.product .caption h6 {
+  color: #455a64;
+}
+
+.product .caption .price + .price {
+  margin-left: 15px;
+}
+
+.product.tumbnail {
+  box-shadow: 0 5px 25px 0 transparent;
+  transition: 0.3s linear;
+  padding-top: 0;
+}
+
+.product.tumbnail img:hover {
+  box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+}
+
+.single-product span {
+  display: inline-block;
+}
+
+.single-product .rating .fa-star, .single-product .rating .fa-star-o {
+  font-size: 16px;
+  color: #f7d4a0;
+  margin-left: 2px;
+}
+
+.single-product .rating + * {
+  margin-left: 15px;
+}
+
+.single-product h1.h1-variant-2 {
+  margin-bottom: 20px;
+}
+
+.single-product .caption:before {
+  content: '';
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.single-product .caption span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.single-product .caption .price {
+  font-weight: 400;
+}
+
+.single-product .caption .price.sale {
+  color: #e75854;
+  font-size: 33px;
+}
+
+.single-product .caption * + .price {
+  margin-left: 10.8%;
+}
+
+@media (max-width: 1199px) {
+  .single-product .caption * + .price {
+    margin-left: 7.8%;
+  }
+}
+
+.single-product .caption * + .quantity {
+  margin-left: 26px;
+}
+
+.single-product .caption .info-list {
+  border-bottom: 1px solid #f3f3ed;
+  border-top: 1px solid #f3f3ed;
+  font-family: Montserrat, sans-serif;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  text-align: left;
+}
+
+.single-product .caption .info-list dt, .single-product .caption .info-list dd {
+  display: inline-block;
+  line-height: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.single-product .caption .info-list dt {
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: #a7b0b4;
+  width: 35%;
+  text-transform: uppercase;
+}
+
+.single-product .caption .info-list dd {
+  font-size: 15px;
+  color: #565452;
+  width: 62.5%;
+}
+
+.single-product .caption .share span.small {
+  margin-top: 9px;
+}
+
+@media (max-width: 991px) {
+  .single-product .caption .share span.small {
+    display: block;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .single-product .table-mobile tr {
+    padding-top: 0;
+  }
+  .single-product .table-mobile tr:before {
+    display: none;
+  }
+}
+
+.price {
+  display: inline-block;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #2b2f3e;
+}
+
+.price.sale {
+  color: #e75854;
+}
+
+.price del {
+  color: #b0bec5;
+}
+
+.quantity {
+  text-align: center;
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  background: #eceff1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 82px;
+  height: auto;
+  display: inline-block;
+}
+
+.quantity span {
+  display: inline-block;
+}
+
+.quantity .num {
+  width: 26px;
+}
+
+.quantity [class*='fa-'] {
+  padding-top: 4px;
+  width: 22px;
+  padding-bottom: 4px;
+  color: #b0bec5;
+  cursor: pointer;
+}
+
+.quantity [class*='fa-']:hover {
+  color: #455a64;
+}
+</style>
+
+
+
+
+
+        
+
+
+<div class="container bootstrap snipets">
+  <h1 class="text-center text-muted">  انواع نوشیدنی ها</h1>
+  <br>    
+  <div class="row flow-offset-1">
+    {%for i in drink%}
+
+    <div class="col-xs-6 col-md-4">
+      <div class="product tumbnail thumbnail-3"><a href="#"><img src="{{i.img.url}}" alt=""></a>
+        <div class="caption">
+          <h6><a href="#">{{i.name}}</a></h6><span class="price">
+            <span class="price sale">$ {{i.price}}</span>
+            <a class="btn btn-outline-success" href="addto{{i.id}}" role="button">افزودن به سبد</a>
+
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  
+  </div>
+</div>
+
+
+
+        <!-- Footer Start -->
+        <div class="footer">
+            
+            <div class="copyright">
+                <div class="container">
+                    <p>Designed By <a href="">mehrdad jamali</a></p>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="{% static 'resturan/js/easing.min.js'%}"></script>
+        <script src="{% static 'resturan/js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment.min.js'%}"></script>
+        <script src="{% static 'resturan/js/moment-timezone.min.js'%}"></script>
+        <script src="{% static 'resturan/js/tempusdominus-bootstrap-4.min.js'%}"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="{% static 'resturan/js/jqBootstrapValidation.min.js'%}"></script>
+        <script src="{% static 'resturan/js/contact.js'%}"></script>
+
+        <!-- Template Javascript -->
+        <script src="{% static 'resturan/js/main.js'%}"></script>
+    </body>
+</html>
